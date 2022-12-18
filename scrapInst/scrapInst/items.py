@@ -6,7 +6,7 @@
 import scrapy
 
 
-class ScrapinstItem(scrapy.Item):
+class Institute(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    personnel = scrapy.Field()
+    
