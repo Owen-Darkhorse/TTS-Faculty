@@ -57,7 +57,10 @@ GHPI = "GHPI"
 GHPI_url = "https://uwaterloo.ca/global-health-policy-innovation-research-centre/our-people"
 ghip_dict = {GHPI: GHPI_url}
 
-
+# WISA: response.xpath('//div[contains(@class, "block-layout-builder")]//h2/text()').getall()
+WISA = "WISA"
+WISA_url = "https://uwaterloo.ca/sustainable-aeronautics/our-people/members"
+wisa_dict = {WISA: WISA_url}
 
 inst_groups = {
     "wat_list_group" : {
@@ -88,7 +91,12 @@ inst_groups = {
     "ghip_group": {
         "name-url": ghip_dict,
         "xpath": '//div[@class="uw-copy-text"]//h2/a/text()'
+    },
+    "wisa_group": {
+        "name-url": wisa_dict,
+        "xpath": '//div[contains(@class, "block-layout-builder")]//h2/text()'
     }
+
 }
 # inst_groups
 
