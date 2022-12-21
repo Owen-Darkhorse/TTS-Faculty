@@ -40,4 +40,9 @@ FacultyAffiliation = FacultyRemoved.drop(inst_list, axis=1)
 # Output into csv
 now = dt.now()
 formattednow = now.strftime("%y%m%d")
-FacultyAffiliation.to_csv(formattednow + "-" + "FacultyAffiliationComplete.csv")
+
+# All affilations in one columns, shown as a list of strings
+FacultyAffiliation.to_csv(formattednow + "-" + "FacultyAffiliationComplete.csv") 
+
+# Affilations in separate columns, shown as boolean to indicate whether a given professor is in the institution or not
+# FacultyRemoved.to_csv(formattednow + "-" + "SeparateFacultyAffiliation.csv")
