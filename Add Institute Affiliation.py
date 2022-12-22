@@ -1,13 +1,15 @@
 import pandas as pd
 from datetime import datetime as dt
-import scrapInst.scrapInst.spiders.InstituteGroups as InstGroup
+import json
+# import scrapInst.scrapInst.spiders.InstituteGroups as InstGroup
 
 Faculty = pd.read_excel("221216-RegularFaculty.xlsx", index_col=False)
-inst_members = pd.read_json("scrapInst/scrapInst/spiders/affiliation.json", typ = "series")
-
+# inst_members = pd.read_json("scrapInst/scrapInst/spiders/affiliation.json", orient = 'split')
+with open("scrapInst/scrapInst/spiders/affiliation.json") as json_file:
+    inst_members = json.load(json_file)     # A list of dictionaries
 
 ## Filter out lecturers, they are not researchers
-FacultyRemoved = Faculty[Faculty['Job Profile'] != "Lecturer"]
+FacultyRemoved = Faculty.loc[Faculty['Job Profile'] != "Lecturer"]
 
 
 # Combine WATCAR dictionary together, and take their union set
@@ -16,10 +18,9 @@ WATCAR_union = set()
 for division in WATCAR_list:
     WATCAR_union = WATCAR_union.union(set(division["WATCAR"]))
 
-WATCAR_union = list(WATCAR_union)
+WATCAR_union = [name for name in WATCAR_union]
 inst_members = list(filter(lambda x: list(x.keys())!=['WATCAR'], inst_members)) + \
     [{"WATCAR": WATCAR_union}]
-
 
 
 ############# Preparing the csv file #############################
@@ -35,7 +36,7 @@ for inst in inst_members:
     FacultyRemoved[inst_name] = FacultyRemoved.Worker.isin(researcher_name)
     # print(inst_name)
 
-FacultyRemoved.CBB
+FacultyRemoved.columns
 
 # Map a list of boolean into a list of affiliations for each researcher
 def mapAffiliation(researcher, inst_list):
@@ -46,11 +47,11 @@ def mapAffiliation(researcher, inst_list):
             affList.append(inst)
     return affList
 
-mapAffiliation(FacultyRemoved.iloc[0], inst_list)
+# mapAffiliation(FacultyRemoved.iloc[0], inst_list)
 
 FacultyRemoved['AffList'] = FacultyRemoved.apply(mapAffiliation, inst_list = inst_list, axis=1)
 FacultyAffiliation = FacultyRemoved.drop(inst_list, axis=1)
-
+# FacultyAffiliation.AffList
 # Output into csv
 now = dt.now()
 formattednow = now.strftime("%y%m%d")

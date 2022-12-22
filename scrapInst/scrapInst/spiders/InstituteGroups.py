@@ -117,5 +117,5 @@ WISA_cmt = ['Sunjoo Advani', 'Wnedy Bailey', 'Derrick Cheung', 'Logan Jones', 'D
 
 # fetch('https://uwaterloo.ca/complexity-innovation/people/core-members/core-members-university-waterloo')
 # response.xpath('//h2[@class="anchor-name"]/a/text()').getall()
-WICI_core = ['Vanessa Schweizer', 'Sharon Kirkpatrick', 'Chris Bauch', 'Trevor Charles', 'Mark Crowley', \
+WICI_core = ['Vanessa Schweizer', 'Sharon Kirkpatrick', 'Christopher Bauch', 'Trevor Charles', 'Mark Crowley', \
     'Peter Deadman', 'Igor Grossmann', 'Keith Hipel', 'Chrystopher Nehaniv', 'Dawn Parker', 'Stephen Quilley']

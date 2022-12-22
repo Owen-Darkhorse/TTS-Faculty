@@ -11,9 +11,9 @@
 9,Michael Waite,Associate Professor,Applied Mathematics,,"['WATER', 'CLIMATE']"
 10,Sander Rhebergen,Associate Professor,Applied Mathematics,,['WISA']
 14,Achim Kempf,Professor,Applied Mathematics,,"['WCA', 'WAT.AI']"
-15,Anita Layton,Professor,Applied Mathematics,"CS, BIOL, CHEMENG","['CBB', 'GAME', 'WIN']"
+15,Anita Layton,Professor,Applied Mathematics,"CS, BIOL, CHEMENG","['CBB', 'WIN', 'GAME']"
 16,Brian Ingalls,Professor,Applied Mathematics,"BIOL, CHEMENG","['CBB', 'WCMR', 'CTN']"
-17,Christopher Bauch,Professor,Applied Mathematics,,[]
+17,Christopher Bauch,Professor,Applied Mathematics,,"['CLIMATE', 'WAT.AI', 'WICI', 'CCMIC']"
 18,Edward Vrscay,Professor,Applied Mathematics,,['WATCAR']
 19,Francis Poulin,Professor,Applied Mathematics,PHYS,"['WATER', 'CLIMATE', 'WICI']"
 20,Hans De Sterck,Professor,Applied Mathematics,,"['CLIMATE', 'WAT.AI', 'WICI', 'CCMIC']"
@@ -47,7 +47,7 @@
 62,Xi He,Assistant Professor,Cheriton School of Computer Science,,['CPI']
 63,Yizhou Zhang,Assistant Professor,Cheriton School of Computer Science,,[]
 64,Yousra Aafer,Assistant Professor,Cheriton School of Computer Science,,['CPI']
-65,Arne Storjohann,Associate Professor,Cheriton School of Computer Science,,[]
+65,Arne Storjohann,Associate Professor,Cheriton School of Computer Science,,['CCMIC']
 66,Bernard Wong,Associate Professor,Cheriton School of Computer Science,,['CPI']
 67,Christopher Batty,Associate Professor,Cheriton School of Computer Science,,['CCMIC']
 68,Craig Kaplan,Associate Professor,Cheriton School of Computer Science,,[]
@@ -171,7 +171,7 @@
 230,Jason Bell,Professor,Pure Mathematics,,[]
 231,Kevin Hare,Professor,Pure Mathematics,,[]
 232,Laurent Marcoux,Professor,Pure Mathematics,,[]
-233,Michael Rubinstein,Professor,Pure Mathematics,,[]
+233,Michael Rubinstein,Professor,Pure Mathematics,,['CCMIC']
 234,Nicolaas Spronk,Professor,Pure Mathematics,,[]
 235,Rahim Moosa,Professor,Pure Mathematics,,[]
 236,Ross Willard,Professor,Pure Mathematics,,[]
